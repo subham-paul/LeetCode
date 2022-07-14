@@ -1,4 +1,5 @@
-#include <iostream>
+// #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -11,9 +12,10 @@ int main() {
 	    }
 	   // reverse
 	   for(int i =0,j=n-1; i<n/2; i++, j--){
-	       int temp = arr[i];
-	       arr[i] = arr[j];
-	       arr[j] = temp;
+	       //int temp = arr[i];
+	       //arr[i] = arr[j];
+	       //arr[j] = temp;
+	       swap(arr[i], arr[j]);
 	   }
 	   //output
 	   for(int i = 0; i<n; i++){
