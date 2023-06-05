@@ -105,25 +105,25 @@ struct Node
 class Solution {
   public:
   
-    int toSumT(Node* root) {
-        if (root == NULL) {
-            return 0;
-        }
-        
-        int leftSum = toSumT(root->left);
-        int rightSum = toSumT(root->right);
-        
-        int old = root->data;
-        root->data = leftSum + rightSum;
-        
-        return root->data + old;
-    }
     // Convert a given tree to a tree where every node contains sum of values of
     // nodes in left and right subtrees in the original tree
+    int sum(Node* root){
+        if(!root) return 0;
+        if(!root->left && !root->right){
+            // leaf node
+            int temp = root->data;
+            root->data=0;
+            return temp;
+        }
+        int leftSum = sum(root->left);
+        int rightSum = sum(root->right);
+        int temp = root->data;
+        root->data = leftSum + rightSum;
+        return root->data + temp;
+    }
     void toSumTree(Node *node)
     {
-        // Your code here
-        toSumT(node);
+        sum(node);
     }
 };
 
