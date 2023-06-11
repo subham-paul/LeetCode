@@ -18,7 +18,7 @@ class Solution{
     
             long long curr = ((prev2 + prev1) * (k - 1)) % mod;
     
-            // shhift -> yaha hi galti karunga ya karungi
+            // yaha hi galti karunga
             prev2 = prev1;
             prev1 = curr;
         }
