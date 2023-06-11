@@ -7,6 +7,7 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
     public:
+    // SOLVE USING TABULATION METHOD
     long long mod = 1000000007;
     long long countWays(int n, int k){
     vector<long long> dp(n + 1, 0);
